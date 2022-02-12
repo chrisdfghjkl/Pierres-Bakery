@@ -38,5 +38,13 @@ namespace Bakery.Tests
       Bread newBread = new Bread(loafCount);
       Assert.AreEqual(10, newBread.BreadCost());
     }
+
+    [TestMethod]
+    public void BreadCost_ReturnsCostIfDivisibleByThree_Int()
+    {
+      int loafCount = 6;
+      Bread newBread = new Bread(loafCount);
+      Assert.AreEqual(20, newBread.BreadCost());
+    }
   }
 } 
