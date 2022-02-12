@@ -1,7 +1,12 @@
 namespace Bakery.Models 
 {
-  public class Pastery
+  public class Pastry
   {
-    
+    public int PastryCount {get; set;}
+
+    public Pastry(int pastryCount)
+    {
+      PastryCount = pastryCount;
+    }
   }
 }
