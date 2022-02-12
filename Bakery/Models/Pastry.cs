@@ -12,8 +12,18 @@ namespace Bakery.Models
     public int PastryCost()
     {
       int pastryPrice = 2;
+      int specialPrice = 5;
+
+      if (PastryCount <= 2)
+      {
+        return pastryPrice * PastryCount;
+      }
+      else 
+      {
+        return (PastryCount / 3) * specialPrice;
+      }
       
-      return pastryPrice * PastryCount;
+      
     }
   }
 }
