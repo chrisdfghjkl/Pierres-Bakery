@@ -22,5 +22,21 @@ namespace Bakery.Tests
       Bread newBread = new Bread(loafCount);
       Assert.AreEqual(loafCount, newBread.LoafCount);
     }
+
+    [TestMethod]
+    public void BreadCost_ReturnsCostOfZeroLoavesPurchased_Int()
+    {
+      int loafCount = 0;
+      Bread newBread = new Bread(loafCount);
+      Assert.AreEqual(0, newBread.BreadCost());
+    }
+
+    [TestMethod]
+    public void BreadCost_ReturnsCostOfOneOrTwoLoavesPurchased_Int()
+    {
+      int loafCount = 2;
+      Bread newBread = new Bread(loafCount);
+      Assert.AreEqual(10, newBread.BreadCost());
+    }
   }
 } 
