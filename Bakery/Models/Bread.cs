@@ -8,5 +8,11 @@ namespace Bakery.Models
     {
       LoafCount = loafCount;
     }
+
+    public int BreadCost()
+    {
+      int loafPrice = 5;
+      return loafPrice * LoafCount;
+    }
   }
 }
