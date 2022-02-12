@@ -18,6 +18,17 @@ namespace Bakery
       Console.WriteLine("|      Pastry - 3 For $5     |");
       Console.WriteLine("|                            |");
       Console.WriteLine("==============================");
+      Console.WriteLine("");
+     
+      Console.WriteLine("Welcome to Pierre's, how many loaves of bread would you like?");
+      string inputBreadOrder = Console.ReadLine();
+      int LoafCount = int.Parse(inputBreadOrder);
+
+      Console.WriteLine("You got it! Now, how many pastries would you like?");
+      string inputPastryOrder = Console.ReadLine();
+      int PastryCount = int.Parse(inputPastryOrder);
+
+      
     }
   }
 }
