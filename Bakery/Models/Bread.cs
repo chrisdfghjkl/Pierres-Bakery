@@ -11,8 +11,16 @@ namespace Bakery.Models
 
     public int BreadCost()
     {
-      int loafPrice = 5;
-      return loafPrice * LoafCount;
+      int loafCost = 5;
+
+      if (LoafCount <= 2)
+      {
+        return loafCost * LoafCount;
+      }
+      else
+      {
+        return (LoafCount / 3) * 10;
+      }
     }
   }
 }
