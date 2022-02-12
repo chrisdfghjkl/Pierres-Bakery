@@ -9,6 +9,11 @@ namespace Bakery.Models
       PastryCount = pastryCount;
     }
 
-    
+    public int PastryCost()
+    {
+      int pastryPrice = 2;
+      
+      return pastryPrice * PastryCount;
+    }
   }
 }
