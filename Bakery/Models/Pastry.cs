@@ -18,6 +18,10 @@ namespace Bakery.Models
       {
         return pastryPrice * PastryCount;
       }
+      else if (PastryCount % 3 != 0)
+      {
+        return (((PastryCount - (PastryCount % 3)) / 3) * specialPrice) + ((PastryCount % 3) * pastryPrice);
+      }
       else 
       {
         return (PastryCount / 3) * specialPrice;
