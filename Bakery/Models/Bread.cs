@@ -17,6 +17,11 @@ namespace Bakery.Models
       {
         return loafCost * LoafCount;
       }
+      else if (LoafCount % 3 != 0)
+      {
+        int breadSpecial = loafCost * ((LoafCount - (LoafCount % 3)) / 3);
+        return (LoafCount * loafCost) - breadSpecial;
+      }
       else
       {
         return (LoafCount / 3) * 10;
