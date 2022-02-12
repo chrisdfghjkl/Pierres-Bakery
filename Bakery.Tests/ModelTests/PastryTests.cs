@@ -30,5 +30,13 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry(pastryCount);
       Assert.AreEqual(4, newPastry.PastryCost());
     }
+
+    [TestMethod]
+    public void PastryCost_ReturnCostIdDivisibleByThree_Int()
+    {
+      int pastryCount = 3;
+      Pastry newPastry = new Pastry(pastryCount);
+      Assert.AreEqual(5, newPastry.PastryCost());
+    }
   }
 }
